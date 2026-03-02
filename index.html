@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Undangan Pernikahan Rani Ramadhanti & Bram Krisna Danu — Ahad, 05 April 2026">
+  <meta name="theme-color" content="#A8C8E8">
+  <meta property="og:title" content="Undangan Pernikahan — Rani & Bram">
+  <meta property="og:description"
+    content="Bersama keluarga, kami mengundang Anda untuk menyaksikan momen sakral pernikahan kami.">
+  <meta property="og:type" content="website">
+  <title>Undangan Pernikahan — Rani &amp; Bram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="public/style.css">
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════
+     AUDIO
+══════════════════════════════ -->
+  <!--
+  Ganti src di bawah dengan file musik Anda.
+  Contoh: <source src="musik/lagu-pernikahan.mp3" type="audio/mpeg">
+  Musik gratis: https://pixabay.com/music/search/romantic%20piano/
+-->
+  <audio id="bgAudio" loop preload="none">
+    <source src="https://assets.mixkit.co/music/657/657.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ══════════════════════════════
+     COVER
+══════════════════════════════ -->
+  <div id="cover">
+    <div class="cover-ring"></div>
+    <div class="cover-ring"></div>
+    <div class="cover-ring"></div>
+
+    <div class="cover-content">
+      <p class="cover-eyebrow">Undangan Pernikahan</p>
+      <div class="cover-bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</div>
+
+      <div class="cover-sep">
+        <div class="cover-sep-line"></div>
+        <span class="cover-sep-gem">✦</span>
+        <div class="cover-sep-line"></div>
+      </div>
+
+      <h1 class="cover-names">
+        Rani
+        <span class="cover-amp">&amp;</span>
+        Bram
+      </h1>
+
+      <p class="cover-date">Ahad &nbsp;·&nbsp; 05 April 2026</p>
+
+      <div id="cover-to" style="display:none;margin:.75rem 0 0;">
+        <p
+          style="font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.3rem;">
+          Kepada Yth.</p>
+        <p id="cover-to-name"
+          style="font-family:'Playfair Display',serif;font-size:clamp(1.1rem,3vw,1.5rem);font-weight:600;color:#fff;text-shadow:0 2px 12px rgba(58,122,165,.4);">
+        </p>
+      </div>
+
+      <div class="cover-sep">
+        <div class="cover-sep-line"></div>
+        <span class="cover-sep-gem">✦</span>
+        <div class="cover-sep-line"></div>
+      </div>
+
+      <br>
+      <button class="btn-buka" onclick="openInvitation()">
+        <span class="btn-buka-icon">💌</span> Buka Undangan
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+     FLOATING MUSIC BUTTON
+══════════════════════════════ -->
+  <button id="music-btn" title="Putar / Jeda Musik" onclick="toggleMusic()">
+    <span id="music-icon">♪</span>
+  </button>
+
+  <!-- ══════════════════════════════
+     MAIN CONTENT
+══════════════════════════════ -->
+  <div id="main">
+
+    <!-- ── OPENING QUOTE ── -->
+    <section class="sec" id="opening">
+      <div class="sec-inner">
+        <div class="quote-card fi">
+          <p class="q-arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا
+            وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+          <p class="q-trans">
+            "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu
+            sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+            sayang."
+          </p>
+          <p class="q-src">— QS. Ar-Rum: 21</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COUPLE ── -->
+    <section class="sec" id="couple">
+      <div class="sec-inner">
+        <div class="sec-hd fi">
+          <span class="sec-label">Mempelai</span>
+          <h2 class="sec-title">Dua Hati <em>Bersatu</em></h2>
+          <div class="sep-row">
+            <div class="sep-line"></div>
+            <span class="sep-icon">💍</span>
+            <div class="sep-line r"></div>
+          </div>
+          <p class="sec-sub">Dengan memohon Ridho dan Rahmat Allah SWT,
+            kami mengharapkan Doa dari Bapak/Ibu/Saudara/i untuk kelancaran dan keberkahan
+            pada acara akad dan resepsi
+            pernikahan putra dan putri kami:
+          </p>
+        </div>
+
+        <div class="couple-wrap fi fi-d1">
+          <!-- Mempelai Wanita -->
+          <div class="couple-card">
+            <div class="couple-photo-wrap">
+              <div class="couple-placeholder">
+                <span class="ph-icon">👰</span>
+                <span class="ph-lbl">Foto Mempelai Wanita</span>
+              </div>
+            </div>
+            <p class="couple-role">Mempelai Wanita</p>
+            <h3 class="couple-name">Rani Ramadhanti</h3>
+            <p class="couple-parents">
+              Putri dari:<br>
+              <strong>Bapak Ahmad Fadli</strong><br>
+              &amp; <strong>Ibu Nikmah</strong>
+            </p>
+          </div>
+
+          <!-- Pemisah -->
+          <div class="couple-mid">
+            <div class="couple-mid-line"></div>
+            <span class="couple-mid-icon">💞</span>
+            <div class="couple-mid-line"></div>
+          </div>
+
+          <!-- Mempelai Pria -->
+          <div class="couple-card">
+            <div class="couple-photo-wrap">
+              <div class="couple-placeholder">
+                <span class="ph-icon">🤵</span>
+                <span class="ph-lbl">Foto Mempelai Pria</span>
+              </div>
+            </div>
+            <p class="couple-role">Mempelai Pria</p>
+            <h3 class="couple-name">Bram Krisna Danu</h3>
+            <p class="couple-parents">
+              Putra dari:<br>
+              <strong>Bapak Sarwono</strong><br>
+              &amp; <strong>Ibu Risem</strong>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EVENT DETAILS ── -->
+    <section class="sec" id="event">
+      <div class="sec-inner">
+        <div class="sec-hd fi">
+          <span class="sec-label">Rangkaian Acara</span>
+          <h2 class="sec-title">Hari yang <em>Istimewa</em></h2>
+          <div class="sep-row">
+            <div class="sep-line"></div>
+            <span class="sep-icon">📅</span>
+            <div class="sep-line r"></div>
+          </div>
+          <p class="sec-sub">Dengan segala kerendahan hati, kami mengundang Bapak/Ibu/Saudara/i untuk hadir menyaksikan
+            momen bahagia kami</p>
+        </div>
+
+        <div class="event-grid">
+          <!-- Akad -->
+          <div class="event-card fi fi-d1">
+            <span class="ev-badge">Akad Nikah</span>
+            <div class="ev-icon">🕌</div>
+            <h3 class="ev-name">Akad Nikah</h3>
+            <div class="ev-row">
+              <div class="ev-dot">📅</div>
+              <div class="ev-info">
+                <strong>Ahad, 05 April 2026</strong>
+                <span>Hari dan Tanggal</span>
+              </div>
+            </div>
+            <div class="ev-row">
+              <div class="ev-dot">🕗</div>
+              <div class="ev-info">
+                <strong>09.00 WIB</strong>
+                <span>Waktu dimulai</span>
+              </div>
+            </div>
+            <div class="ev-row">
+              <div class="ev-dot">📍</div>
+              <div class="ev-info">
+                <strong>Kediaman Keluarga Mempelai Wanita</strong>
+                <span>Jalan Alimudin Umar Gang Pelopor Rt 005 Rw 000 LK II, Kec. Sukabumi, Kel. Campang Raya, Kota
+                  Bandar
+                  Lampung, Lampung 35122</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resepsi -->
+          <div class="event-card resepsi fi fi-d2">
+            <span class="ev-badge">Resepsi</span>
+            <div class="ev-icon">🥂</div>
+            <h3 class="ev-name">Resepsi Pernikahan</h3>
+            <div class="ev-row">
+              <div class="ev-dot">📅</div>
+              <div class="ev-info">
+                <strong>Ahad, 05 April 2026</strong>
+                <span>Hari dan Tanggal</span>
+              </div>
+            </div>
+            <div class="ev-row">
+              <div class="ev-dot">🕑</div>
+              <div class="ev-info">
+                <strong>11.00 – 14.00 WIB</strong>
+                <span>Waktu pelaksanaan</span>
+              </div>
+            </div>
+            <div class="ev-row">
+              <div class="ev-dot">📍</div>
+              <div class="ev-info">
+                <strong>Kediaman Keluarga Mempelai Wanita</strong>
+                <span>Jalan Alimudin Umar Gang Pelopor Rt 005 Rw 000 LK II, Kec. Sukabumi, Kel. Campang Raya, Kota
+                  Bandar
+                  Lampung, Lampung 35122</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COUNTDOWN ── -->
+    <section class="sec" id="countdown">
+      <div class="sec-inner">
+        <div class="sec-hd fi">
+          <span class="sec-label">Hitung Mundur</span>
+          <h2 class="sec-title">Menuju Hari <em>Bahagia</em></h2>
+          <div class="sep-row">
+            <div class="sep-line"></div>
+            <span class="sep-icon">⏳</span>
+            <div class="sep-line r"></div>
+          </div>
+        </div>
+
+        <div class="cd-grid fi fi-d1" id="cd-grid">
+          <div class="cd-item"><span class="cd-num" id="cd-d">--</span><span class="cd-lbl">Hari</span></div>
+          <div class="cd-item"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl">Jam</span></div>
+          <div class="cd-item"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl">Menit</span></div>
+          <div class="cd-item"><span class="cd-num" id="cd-s">--</span><span class="cd-lbl">Detik</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LOCATION ── -->
+    <section class="sec" id="location">
+      <div class="sec-inner">
+        <div class="sec-hd fi">
+          <span class="sec-label">Lokasi</span>
+          <h2 class="sec-title">Tempat <em>Pelaksanaan</em></h2>
+          <div class="sep-row">
+            <div class="sep-line"></div>
+            <span class="sep-icon">📍</span>
+            <div class="sep-line r"></div>
+          </div>
+        </div>
+
+        <div class="loc-wrap fi fi-d1">
+          <div class="loc-info">
+            <h3 class="loc-title">Kediaman Keluarga Mempelai Wanita</h3>
+            <div class="loc-row">
+              <span class="loc-ico">📍</span>
+              <div class="loc-txt">
+                <span>Jalan Alimudin Umar Gang Pelopor Rt 005 Rw 000 LK II, Kec. Sukabumi, Kel. Campang Raya, Kota
+                  Bandar
+                  Lampung, Lampung 35122</span>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/BNibHTaxqYETtWNNA" target="_blank" class="btn-maps">
+              🗺️ &nbsp;Petunjuk Arah
+            </a>
+          </div>
+
+          <div class="map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m20!1m8!1m3!1d248.2549150395617!2d105.31613490005083!3d-5.404991351419268!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d-5.4049513!2d105.3160994!4m3!3m2!1d-5.4049499999999995!2d105.3160994!5e0!3m2!1sid!2sid!4v1772456650427!5m2!1sid!2sid"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LOVE STORY ── -->
+    <section class="sec" id="story">
+      <div class="sec-inner">
+        <div class="sec-hd fi">
+          <span class="sec-label">Kisah Cinta</span>
+          <h2 class="sec-title">Perjalanan <em>Kami</em></h2>
+          <div class="sep-row">
+            <div class="sep-line"></div>
+            <span class="sep-icon">❤️</span>
+            <div class="sep-line r"></div>
+          </div>
+          <p class="sec-sub">Setiap pertemuan adalah rencana-Nya yang paling indah</p>
+        </div>
+
+        <div class="timeline fi fi-d1">
+          <div class="tl-item">
+            <div class="tl-body">
+              <p class="tl-year">🌸 2020</p>
+              <h4 class="tl-name">Pertemuan Pertama</h4>
+              <p class="tl-desc">Takdir mempertemukan kami dalam sebuah seminar nasional di Universitas Indonesia.
+                Sebuah senyum sederhana menjadi awal dari segalanya yang indah.</p>
+            </div>
+            <div class="tl-dot"></div>
+            <div class="tl-gap"></div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-gap"></div>
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <p class="tl-year">🌿 2021</p>
+              <h4 class="tl-name">Mengenal Lebih Dekat</h4>
+              <p class="tl-desc">Perlahan kami saling mengenal, berbagi cerita, mimpi, dan harapan. Persahabatan yang
+                hangat tumbuh menjadi rasa yang jauh lebih dalam.</p>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-body">
+              <p class="tl-year">💎 2023</p>
+              <h4 class="tl-name">Lamaran</h4>
+              <p class="tl-desc">Dengan penuh keyakinan dan doa, Andi mengunjungi keluarga Salsabila untuk meminang.
+                Sebuah momen haru yang menandai awal babak baru kehidupan kami.</p>
+            </div>
+            <div class="tl-dot"></div>
+            <div class="tl-gap"></div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-gap"></div>
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <p class="tl-year">💍 2026</p>
+              <h4 class="tl-name">Menuju Pelaminan</h4>
+              <p class="tl-desc">Dengan ridha Allah dan restu kedua orang tua, kami siap melangkah ke jenjang yang lebih
+                mulia — membina rumah tangga yang sakinah, mawaddah, wa rahmah.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GALLERY ── -->
+    <section class="sec" id="gallery">
+      <div class="sec-inner">
+        <div class="sec-hd fi">
+          <span class="sec-label">Galeri</span>
+          <h2 class="sec-title">Momen <em>Berharga</em></h2>
+          <div class="sep-row">
+            <div class="sep-line"></div>
+            <span class="sep-icon">📷</span>
+            <div class="sep-line r"></div>
+          </div>
+          <p class="sec-sub">Setiap foto menyimpan kenangan yang tak terlupakan</p>
+        </div>
+
+        <div class="gallery-grid fi fi-d1">
+          <div class="gal-item g-large">
+            <div class="gal-ph">
+              <span class="gal-ph-icon">📸</span>
+              <span class="gal-ph-lbl">Foto Prewedding Utama</span>
+            </div>
+          </div>
+          <div class="gal-item">
+            <div class="gal-ph"><span class="gal-ph-icon">💑</span><span class="gal-ph-lbl">Bersama</span></div>
+          </div>
+          <div class="gal-item">
+            <div class="gal-ph"><span class="gal-ph-icon">🌸</span><span class="gal-ph-lbl">Outdoor</span></div>
+          </div>
+          <div class="gal-item">
+            <div class="gal-ph"><span class="gal-ph-icon">🌅</span><span class="gal-ph-lbl">Senja</span></div>
+          </div>
+          <div class="gal-item">
+            <div class="gal-ph"><span class="gal-ph-icon">💐</span><span class="gal-ph-lbl">Bunga</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RSVP ── -->
+    <section class="sec" id="rsvp">
+      <div class="sec-inner">
+        <div class="sec-hd fi">
+          <span class="sec-label">Konfirmasi Kehadiran</span>
+          <h2 class="sec-title">RSVP &amp; <em>Ucapan</em></h2>
+          <div class="sep-row">
+            <div class="sep-line"></div>
+            <span class="sep-icon">✉️</span>
+            <div class="sep-line r"></div>
+          </div>
+          <p class="sec-sub">Kehadiran dan doa restu Anda adalah karunia terindah bagi kami</p>
+        </div>
+
+        <div class="rsvp-box fi fi-d1" id="rsvp-box">
+          <form id="rsvp-form" onsubmit="submitRSVP(event)" novalidate>
+            <div class="fg">
+              <label for="f-nama">Nama Lengkap *</label>
+              <input type="text" id="f-nama" class="fc" placeholder="Masukkan nama lengkap Anda" required>
+            </div>
+            <div class="fg">
+              <label>Konfirmasi Kehadiran *</label>
+              <div class="radio-row">
+                <label class="radio-lbl">
+                  <input type="radio" name="hadir" value="hadir" required>
+                  <span>✅ &nbsp;Hadir</span>
+                </label>
+                <label class="radio-lbl">
+                  <input type="radio" name="hadir" value="tidak">
+                  <span>❌ &nbsp;Tidak Hadir</span>
+                </label>
+              </div>
+            </div>
+            <div class="fg" id="fg-jumlah">
+              <label for="f-jumlah">Jumlah Tamu</label>
+              <select id="f-jumlah" class="fc">
+                <option value="1">1 orang</option>
+                <option value="2">2 orang</option>
+                <option value="3">3 orang</option>
+                <option value="4">4 orang</option>
+                <option value="5+">5 orang atau lebih</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="f-ucapan">Ucapan &amp; Doa *</label>
+              <textarea id="f-ucapan" class="fc" rows="4"
+                placeholder="Tuliskan ucapan dan doa tulus Anda untuk kedua mempelai..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">💌 &nbsp;Kirim Ucapan &amp; Konfirmasi</button>
+          </form>
+
+          <div class="form-ok" id="form-ok">
+            <div class="ok-icon">🎊</div>
+            <h3>Terima Kasih!</h3>
+            <p>Konfirmasi dan ucapan Anda telah kami terima. Kami sangat menantikan kehadiran Anda di hari bahagia kami.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── UCAPAN & DOA ── -->
+    <section id="ucapan" style="display:none;">
+      <div class="ucapan-inner">
+        <div class="sec-hd fi" style="margin-bottom:1rem;">
+          <span class="sec-label">Ucapan &amp; Doa</span>
+          <h3 class="sec-title" style="font-size:clamp(1.5rem,3.5vw,2rem);">Kata-kata <em>Indah</em></h3>
+        </div>
+        <div class="ucapan-toolbar fi fi-d1">
+          <p class="ucapan-count">Total ucapan: <strong id="ucapan-count">0</strong></p>
+          <span id="sheets-status" class="sheets-badge" style="display:none;"></span>
+        </div>
+        <div id="ucapan-list" class="fi fi-d1">
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DIGITAL GIFT ── -->
+    <section class="sec" id="hadiah">
+      <div class="sec-inner">
+        <div class="sec-hd fi">
+          <span class="sec-label">Hadiah Digital</span>
+          <h2 class="sec-title">Kirim <em>Amplop Digital</em></h2>
+          <div class="sep-row">
+            <div class="sep-line"></div>
+            <span class="sep-icon">🎁</span>
+            <div class="sep-line r"></div>
+          </div>
+          <p class="sec-sub">Bagi yang ingin memberikan hadiah, Anda dapat mengirimkan melalui rekening berikut</p>
+        </div>
+
+        <div class="gift-grid fi fi-d1">
+          <div class="gift-card">
+            <div class="gift-bank-icon">💙</div>
+            <p class="gift-bank">DANA</p>
+            <p class="gift-no" id="no-dana">0895612144081</p>
+            <p class="gift-an">a.n. Rani Ramadhanti</p>
+            <button class="btn-copy" onclick="copyAccount('no-dana', this)">📋 &nbsp;Salin Nomor</button>
+          </div>
+          <div class="gift-card">
+            <div class="gift-bank-icon">🏦</div>
+            <p class="gift-bank">Bank Mandiri</p>
+            <p class="gift-no" id="no-mandiri">114 00 2149494 6</p>
+            <p class="gift-an">a.n. Bram Krisna Danu</p>
+            <button class="btn-copy" onclick="copyAccount('no-mandiri', this)">📋 &nbsp;Salin Nomor</button>
+          </div>
+        </div>
+
+        <p class="gift-note fi fi-d2">
+          Hadiah fisik dapat dikirimkan ke alamat yang tertera di undangan fisik.<br>
+          Konfirmasi pengiriman dapat melalui WhatsApp. Terima kasih atas kebaikan dan perhatian Anda. 🙏
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CLOSING ── -->
+    <section id="closing">
+      <div class="sec-inner">
+        <div class="closing-inner fi">
+          <blockquote class="closing-quote">
+            Cinta yang sejati bukan sekadar perasaan, melainkan sebuah keputusan untuk saling menjaga, memuliakan, dan
+            mencintai satu sama lain seumur hidup.
+          </blockquote>
+
+          <div class="sep-row" style="max-width:200px;">
+            <div class="sep-line"></div>
+            <span class="sep-icon">💍</span>
+            <div class="sep-line r"></div>
+          </div>
+
+          <h2 class="closing-names">Rani <em>&amp;</em> Bram</h2>
+          <p class="closing-tag">#Rani&BramWedding2026</p>
+
+          <p class="closing-doa">
+            Dengan penuh kerendahan hati, kami memohon doa restu atas pernikahan kami.<br>
+            Kehadiran Anda adalah kebahagiaan terbesar bagi kami dan seluruh keluarga.
+          </p>
+          <p class="closing-arabic">وَالسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <p>
+        Dibuat dengan penuh <span class="heart">❤️</span> untuk hari istimewa Kami<br>
+        <strong style="color:rgba(255,255,255,.75)">Rani Ramadhanti &amp; Bram Krisna Danu</strong><br>
+        Ahad, 05 April 2026
+      </p>
+      <p class="brand">0neCigarettes © 2026 Undangan Digital &nbsp;·&nbsp; All rights reserved</p>
+    </footer>
+
+  </div><!-- /#main -->
+
+  <script src="public/script.js"></script>
+</body>
+
+</html>
