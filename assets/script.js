@@ -67,7 +67,7 @@ function startMusic () {
   audio.play().then(() => {
     musikOn = true;
     updateMusicBtn();
-    fadeInAudio(0.35);
+    fadeInAudio(1);
   }).catch(() => { /* autoplay blocked — user can press the button */ });
 }
 
