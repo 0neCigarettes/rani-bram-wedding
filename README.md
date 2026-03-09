@@ -15,9 +15,12 @@ https://username.github.io/mywedding/
 ```
 mywedding/
 ├── index.html          # Markup HTML
-└── public/
+└── assets/
+    ├── favicon.ico     # Ikon browser / tab
     ├── style.css       # Semua styling (CSS variables, layout, animasi)
-    └── script.js       # Logika: musik, countdown, RSVP, Google Sheets
+    ├── script.js       # Logika: musik, countdown, RSVP, Google Sheets
+    ├── images/         # Foto mempelai & galeri
+    └── musics/         # File audio latar
 ```
 
 ---
@@ -107,7 +110,7 @@ Salin URL deployment.
 
 Spreadsheet → **Share → Anyone with the link → Viewer**
 
-### 4. Update `public/script.js`
+### 4. Update `assets/script.js`
 
 Ganti nilai config dengan `btoa()` di browser console:
 
@@ -117,7 +120,7 @@ btoa('YOUR_SHEET_ID')     // ambil dari URL spreadsheet
 btoa('YOUR_APPS_SCRIPT_URL')
 ```
 
-Kemudian update di `script.js`:
+Kemudian update di `assets/script.js`:
 
 ```js
 const SHEET_ID  = _c('BASE64_SHEET_ID_DISINI');
@@ -144,11 +147,11 @@ Di GitHub: **Settings → Pages → Source: Deploy from branch → main → / (r
 
 ## 🎵 Musik Latar
 
-Tambahkan file audio di `public/`:
+Tambahkan file audio di `assets/musics/`:
 
 ```html
 <!-- index.html, cari elemen <audio> dan update src: -->
-<source src="public/musik.mp3" type="audio/mpeg">
+<source src="assets/musics/nama-lagu.mp3" type="audio/mpeg">
 ```
 
 Format yang didukung: `.mp3`, `.ogg`, `.wav`
@@ -160,11 +163,11 @@ Format yang didukung: `.mp3`, `.ogg`, `.wav`
 | Yang ingin diubah | Lokasi |
 |---|---|
 | Nama mempelai, tanggal, venue | `index.html` — cari teks langsung |
-| Warna tema | `public/style.css` — blok `:root` (CSS variables) |
-| Foto mempelai | `index.html` — ganti `.couple-placeholder` dengan `<img>` |
+| Warna tema | `assets/style.css` — blok `:root` (CSS variables) |
+| Foto mempelai & galeri | `assets/images/` — ganti file gambar lalu update `src` di `index.html` |
 | Rekening bank | `index.html` — seksi `id="hadiah"` |
 | Koordinat peta | `index.html` — `<iframe>` Google Maps embed |
-| Countdown target | `public/script.js` — fungsi `tick()` |
+| Countdown target | `assets/script.js` — fungsi `tick()` |
 
 ---
 
