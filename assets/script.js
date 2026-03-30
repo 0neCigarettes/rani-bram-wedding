@@ -152,8 +152,15 @@ const SHEETS_URL = _c('aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6d
 let wishesData = [];
 
 // ── Submit RSVP ──
-function submitRSVP (e) {
+function submitRSVP(e) {
   e.preventDefault();
+
+  // 🚫 prevent multiple submit in same session
+  if (sessionStorage.getItem('rsvp_submitted')) {
+    alert('Kamu sudah mengirim RSVP di sesi ini 🙏');
+    return;
+  }
+
   const nama = document.getElementById('f-nama').value.trim();
   const hadir = document.querySelector('input[name="hadir"]:checked');
   const jumlah = document.getElementById('f-jumlah').value;
@@ -171,9 +178,14 @@ function submitRSVP (e) {
   };
 
   sendToSheets(entry);
+
+  // ✅ mark as submitted
+  sessionStorage.setItem('rsvp_submitted', 'true');
+
   wishesData.push(entry);
   addWishCard(entry, true);
   updateCount(wishesData.length);
+
   document.getElementById('ucapan').style.display = 'block';
   document.getElementById('ucapan-empty').style.display = 'none';
   document.getElementById('rsvp-form').style.display = 'none';
